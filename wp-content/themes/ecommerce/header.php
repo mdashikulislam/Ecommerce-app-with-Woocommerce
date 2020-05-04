@@ -1,32 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes();?> class="no-js no-svg">
 
 <head>
-	<meta charset="utf-8">
+	<meta charset="<?php bloginfo('charset');?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<meta name="keywords" content="MediaCenter, Template, eCommerce">
+	<meta name="description" content="<?php bloginfo('description');?>">
 	<meta name="robots" content="all">
-	<title>eCommerce premium HTML5 & CSS3 Template</title>
-	<!-- Bootstrap Core CSS -->
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/assets/css/main.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/assets/css/blue.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/assets/css/owl.carousel.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/assets/css/owl.transitions.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/assets/css/animate.min.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/assets/css/rateit.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/assets/css/bootstrap-select.min.css">
 
-	<!-- Icons/Glyphs -->
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/assets/css/font-awesome.css">
+	<!-- Bootstrap Core CSS -->
+
+
+
+
 
 	<!-- Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,700italic,800' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-
 	<?php wp_head();?>
 </head>
 
@@ -52,7 +42,7 @@
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-10 logo-holder">
 					<div class="logo">
-						<a href="home.html"> <img src="<?php echo get_template_directory_uri();?>/assets/images/logo.png" alt="logo"> </a>
+						<a href="home.html"> <img src="<?php echo esc_html(get_template_directory_uri());?>/assets/images/logo.png" alt="logo"> </a>
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
@@ -71,7 +61,7 @@
 									<div class="row">
 										<div class="col-xs-4">
 											<div class="image">
-												<a href="detail.html"><img src="<?php echo get_template_directory_uri();?>/assets/images/cart.jpg" alt=""></a>
+												<a href="detail.html"><img src="<?php echo esc_html(get_template_directory_uri());?>/assets/images/cart.jpg" alt=""></a>
 											</div>
 										</div>
 										<div class="col-xs-7">
@@ -177,7 +167,7 @@
 															</ul>
 														</div>
 														<div class="col-xs-12 col-sm-12 col-md-4 col-menu custom-banner">
-															<a href="#"><img alt="" src="<?php echo get_template_directory_uri();?>/assets/images/banners/banner-side.png"></a>
+															<a href="#"><img alt="" src="<?php echo esc_html(get_template_directory_uri());?>/assets/images/banners/banner-side.png"></a>
 														</div>
 													</div>
 												</div>

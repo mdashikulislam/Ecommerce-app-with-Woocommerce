@@ -103,11 +103,11 @@
 			<div class="col-xs-12 col-sm-6 no-padding">
 				<div class="clearfix payment-methods">
 					<ul>
-						<li><img src="<?php echo get_template_directory_uri();?>/assets/images/payments/1.png" alt=""></li>
-						<li><img src="<?php echo get_template_directory_uri();?>/assets/images/payments/2.png" alt=""></li>
-						<li><img src="<?php echo get_template_directory_uri();?>/assets/images/payments/3.png" alt=""></li>
-						<li><img src="<?php echo get_template_directory_uri();?>/assets/images/payments/4.png" alt=""></li>
-						<li><img src="<?php echo get_template_directory_uri();?>/assets/images/payments/5.png" alt=""></li>
+						<li><img src="<?php echo esc_html(get_template_directory_uri());?>/assets/images/payments/1.png" alt=""></li>
+						<li><img src="<?php echo esc_html(get_template_directory_uri());?>/assets/images/payments/2.png" alt=""></li>
+						<li><img src="<?php echo esc_html(get_template_directory_uri());?>/assets/images/payments/3.png" alt=""></li>
+						<li><img src="<?php echo esc_html(get_template_directory_uri());?>/assets/images/payments/4.png" alt=""></li>
+						<li><img src="<?php echo esc_html(get_template_directory_uri());?>/assets/images/payments/5.png" alt=""></li>
 					</ul>
 				</div>
 				<!-- /.payment-methods -->
@@ -116,18 +116,7 @@
 	</div>
 </footer>
 <!-- JavaScripts placed at the end of the document-->
-<script src="<?php echo get_template_directory_uri();?>/assets/js/jquery-1.11.1.min.js"></script>
-<script src="<?php echo get_template_directory_uri();?>/assets/js/bootstrap.min.js"></script>
-<script src="<?php echo get_template_directory_uri();?>/assets/js/bootstrap-hover-dropdown.min.js"></script>
-<script src="<?php echo get_template_directory_uri();?>/assets/js/owl.carousel.min.js"></script>
-<script src="<?php echo get_template_directory_uri();?>/assets/js/echo.min.js"></script>
-<script src="<?php echo get_template_directory_uri();?>/assets/js/jquery.easing-1.3.min.js"></script>
-<script src="<?php echo get_template_directory_uri();?>/assets/js/bootstrap-slider.min.js"></script>
-<script src="<?php echo get_template_directory_uri();?>/assets/js/jquery.rateit.min.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/assets/js/lightbox.min.js"></script>
-<script src="<?php echo get_template_directory_uri();?>/assets/js/bootstrap-select.min.js"></script>
-<script src="<?php echo get_template_directory_uri();?>/assets/js/wow.min.js"></script>
-<script src="<?php echo get_template_directory_uri();?>/assets/js/scripts.js"></script>
+
 <?php wp_footer();?>
 </body>
 
