@@ -31,3 +31,11 @@ function themeScripts(){
 
 }
 add_action('wp_enqueue_scripts','themeScripts');
+
+function themeMenus(){
+	if (function_exists('register_nav_menu')){
+		register_nav_menu('main_menu',__('Main Menu','ecommerce'));
+		register_nav_menu('top_menu',__('Top Menu','ecommerce'));
+	}
+}
+add_action('init','themeMenus');
