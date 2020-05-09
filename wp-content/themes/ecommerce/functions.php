@@ -1,6 +1,7 @@
 <?php
 add_theme_support('title-tag');
 
+//Theme enqueue Script
 function themeScripts(){
 	//For theme Style
 	wp_enqueue_style('bootstrap',get_theme_file_uri('/assets/css/bootstrap.min.css'),array(),'3.2.0');
@@ -31,7 +32,7 @@ function themeScripts(){
 
 }
 add_action('wp_enqueue_scripts','themeScripts');
-
+//For Navigation menu
 function themeMenus(){
 	if (function_exists('register_nav_menu')){
 		register_nav_menu('main_menu',__('Main Menu','ecommerce'));
@@ -39,3 +40,53 @@ function themeMenus(){
 	}
 }
 add_action('init','themeMenus');
+//For Image support
+add_theme_support('post-thumbnails');
+set_post_thumbnail_size(320,200,true);
+
+//For Footer Widget
+function themeFooterWidgets(){
+	//Widget One
+	register_sidebar(array(
+		'name'              =>esc_html__('Footer Widget One','ecommerce'),
+		'description'       =>esc_html__('This is footer widget one','ecommerce'),
+		'id'                =>'footer_widget_one',
+		'before_widget'     =>'<div class="col-xs-12 col-sm-6 col-md-3">',
+		'after_widget'      =>'</div>',
+		'before_title'      =>'<div class="module-heading"><h4 class="module-title">',
+		'after_title'       =>'</h4></div>'
+	));
+	//Widget Two
+	register_sidebar(array(
+		'name'              =>esc_html__('Footer Widget Two','ecommerce'),
+		'description'       =>esc_html__('This is footer widget Two','ecommerce'),
+		'id'                =>'footer_widget_two',
+		'before_widget'     =>'<div class="col-xs-12 col-sm-6 col-md-3">',
+		'after_widget'      =>'</div>',
+		'before_title'      =>'<div class="module-heading"><h4 class="module-title">',
+		'after_title'       =>'</h4></div>'
+	));
+	//Widget Three
+	register_sidebar(array(
+		'name'              =>esc_html__('Footer Widget Three','ecommerce'),
+		'description'       =>esc_html__('This is footer widget Three','ecommerce'),
+		'id'                =>'footer_widget_three',
+		'before_widget'     =>'<div class="col-xs-12 col-sm-6 col-md-3">',
+		'after_widget'      =>'</div>',
+		'before_title'      =>'<div class="module-heading"><h4 class="module-title">',
+		'after_title'       =>'</h4></div>'
+	));
+	//Widget Four
+	register_sidebar(array(
+		'name'              =>esc_html__('Footer Widget Four','ecommerce'),
+		'description'       =>esc_html__('This is footer widget Four','ecommerce'),
+		'id'                =>'footer_widget_four',
+		'before_widget'     =>'<div class="col-xs-12 col-sm-6 col-md-3">',
+		'after_widget'      =>'</div>',
+		'before_title'      =>'<div class="module-heading"><h4 class="module-title">',
+		'after_title'       =>'</h4></div>'
+	));
+}
+add_action('widgets_init','themeFooterWidgets');
+
+
