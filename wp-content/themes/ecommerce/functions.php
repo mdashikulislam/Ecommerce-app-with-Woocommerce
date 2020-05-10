@@ -88,5 +88,9 @@ function themeFooterWidgets(){
 	));
 }
 add_action('widgets_init','themeFooterWidgets');
-
+//Woocommerce Support
+function themeWooCommerceSupport(){
+	add_theme_support('woocommerce');
+}
+add_action('after_setup_theme','themeWooCommerceSupport');
 
