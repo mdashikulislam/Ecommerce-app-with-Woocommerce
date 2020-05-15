@@ -13,6 +13,7 @@ function themeScripts(){
 	wp_enqueue_style('rateit',get_theme_file_uri('/assets/css/rateit.css'),array(),'1.0');
 	wp_enqueue_style('bootstrap-select',get_theme_file_uri('/assets/css/bootstrap-select.min.css'),array(),'1.6.2');
 	wp_enqueue_style('font-awesome',get_theme_file_uri('/assets/css/font-awesome.css'),array(),'4.6.2');
+	wp_enqueue_style('woocommerce',get_theme_file_uri('/assets/css/woocommerce.css'),array(),'1.0');
 	wp_enqueue_style('stylesheet',get_stylesheet_uri());
 
 	//for The Scripts
@@ -94,3 +95,15 @@ function themeWooCommerceSupport(){
 }
 add_action('after_setup_theme','themeWooCommerceSupport');
 
+//Remove Breadcrumb
+function removeBreadcrumb(){
+	remove_action('woocommerce_before_main_content','woocommerce_breadcrumb',20,0);
+}
+add_action('init','removeBreadcrumb');
+//Change Product row from 4 to 3
+if (!function_exists('loop_column_3')){
+	function loop_column_3(){
+		return 3;
+	}
+}
+add_filter('loop_shop_columns','loop_column_3');

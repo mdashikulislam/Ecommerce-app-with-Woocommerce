@@ -1,8 +1,8 @@
 <?php get_header();?>
-
 	<div class="body-content">
 		<div class="container">
 			<div class="row" style="margin-top: 30px;">
+                <h>Woocommerce</h>
 				<div class="blog-page">
 					<div class="col-md-9">
 						<?php woocommerce_content();?>
@@ -12,5 +12,4 @@
 			</div>
 		</div>
 	</div>
-
 <?php get_footer();?>
