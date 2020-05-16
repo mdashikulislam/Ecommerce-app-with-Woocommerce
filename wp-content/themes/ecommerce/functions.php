@@ -107,3 +107,23 @@ if (!function_exists('loop_column_3')){
 	}
 }
 add_filter('loop_shop_columns','loop_column_3');
+//Woo Commerce Breadcrumb customize
+function themeWoocommerceBreadcrumb(){
+	return array(
+		'delimiter'=>'&#47',
+		'wrap_before'=>'<ul class="list-inline list-unstyled"><li>',
+		'wrap_after'=>'</li></ul>',
+		'before'=>' ',
+		'after'=>' ',
+		'home'=>_x('Home','breadcrumb','woocommerce'),
+
+	);
+}
+add_filter('woocommerce_breadcrumb_defaults','themeWoocommerceBreadcrumb');
+
+//Woocommerce Shop product filter remove
+function shopResulutFilterRemove(){
+	remove_action('woocommerce_before_shop_loop','woocommerce_result_count',20);
+	remove_action('woocommerce_before_shop_loop','woocommerce_catalog_ordering',30);
+}
+add_action('init','shopResulutFilterRemove');
