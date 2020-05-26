@@ -1,0 +1,17 @@
+2020-05-26T17:04:35+00:00 CRITICAL Uncaught Error: Call to undefined function woocommerce_catalog_ordering_custom() in C:\xampp\htdocs\woo\wp-content\themes\ecommerce\woocommerce\archive-product.php:82
+Stack trace:
+#0 C:\xampp\htdocs\woo\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\woo\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\woo\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\woo\wp-content\themes\ecommerce\woocommerce\archive-product.php on line 82
+
+2020-05-26T17:08:41+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function woocommerceThemeCustomCatalogOrderBy(), 0 passed in C:\xampp\htdocs\woo\wp-content\themes\ecommerce\woocommerce\archive-product.php on line 82 and exactly 1 expected in C:\xampp\htdocs\woo\wp-content\themes\ecommerce\functions.php:217
+Stack trace:
+#0 C:\xampp\htdocs\woo\wp-content\themes\ecommerce\woocommerce\archive-product.php(82): woocommerceThemeCustomCatalogOrderBy()
+#1 C:\xampp\htdocs\woo\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\woo\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\woo\index.php(17): require('C:\\xampp\\htdocs...')
+#4 {main}
+  thrown in C:\xampp\htdocs\woo\wp-content\themes\ecommerce\functions.php on line 217
+

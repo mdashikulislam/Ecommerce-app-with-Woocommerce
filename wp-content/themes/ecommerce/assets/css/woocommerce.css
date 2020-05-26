@@ -53,3 +53,35 @@
     float: left;
     margin-right: 5px;
 }
+.prev {
+    padding: 0 8px!important;
+    background: none repeat scroll 0 0 #dddddd!important;
+    color: #fff!important;
+    border-radius: 2px;
+
+}
+.prev:hover{
+    background: none repeat scroll 0 0 #0f6cb2!important;
+}
+.next {
+    padding: 0 8px!important;
+    background: none repeat scroll 0 0 #dddddd!important;
+    color: #fff!important;
+    border-radius: 2px;
+
+}
+.next:hover{
+    background: none repeat scroll 0 0 #0f6cb2!important;
+}
+.filters-container{
+    box-shadow: none;
+}
+.woocommerce .woocommerce-ordering {
+    margin: 0 0 1em 10px;
+}
+.woocommerce .woocommerce-ordering select {
+    padding: 1px 10px;
+}
+.fld.inline.select-change select {
+    width: 91px;
+}
